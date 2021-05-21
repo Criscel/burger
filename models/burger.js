@@ -15,6 +15,5 @@ const burger = {
       orm.update('burgers', objColVals, condition, (res) => cb(res));
     },
   };
-  
 
 module.exports = burger;

@@ -4,9 +4,9 @@ const burger = require('../models/burger');
 
 //Create the router for the app
 router.get('/', (req, res) => {
-    cat.all((data) => {
+  burger.all((data) => {
       const hbsObject = {
-        cats: data,
+        burger: data,
       };
       console.log('hbsObject', hbsObject);
       res.render('index', hbsObject);
@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
   });
   
   router.post('/api/burgers', (req, res) => {
-    cat.create(['name', 'sleepy'], [req.body.name, req.body.sleepy], (result) => {
+    burger.create(['burger_name', 'devoured'], [req.body.burger_name, req.body.devoured], (result) => {
       // Send back the ID of the new quote
       res.json({ id: result.insertId });
     });
@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
   
     burgers.update(
       {
-        sleepy: req.body.sleepy,
+        devoured: req.body.devoured,
       },
       condition,
       (result) => {
