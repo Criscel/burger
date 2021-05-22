@@ -6,40 +6,10 @@ body{
 	color: #333;
 }
 
-.jumbotron {
-	background-color: #f5f5f5;
-}
-
-
 * {
 	text-align: center;
 }
 
-ul {
-  list-style: none;
+img {
+  margin-top: 20px;
 }
-li {
-  padding: 20px;
-  margin: 10px;
-  background: lightgrey;
-}
-
-.label {
-  font-weight: bold;
-}
-
-.add-burger {
-  margin-bottom: 5px;
-}
-
-
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
-}
-
-.form-group {
-  margin-bottom: 5px;
-}
-

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', (event) => { //waits until page loads to start, otherwise devourBtn is null
 
   // change to 'devoured'
-  const devourBtn = document.querySelectorAll('.devour-button');
+  const devourBtn = document.querySelectorAll('.devour-btn');
 
   devourBtn.forEach(item => {
       item.addEventListener('click', (e) => {
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', (event) => { //waits until page lo
 
   submitForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const burgerName = document.getElementById('burger-input').value.trim();
+      const burgerName = document.getElementById('burger-name').value.trim();
       if (burgerName === ''){
           return
       }
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', (event) => { //waits until page lo
             },
           body: JSON.stringify(newBurger),
       }).then(() => {
-          document.getElementById('burger-input').value = '';
+          document.getElementById('burger-name').value = '';
           location.reload('');
       });
   });
